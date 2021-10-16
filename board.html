@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+    <link rel="stylesheet" href="board.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p class="title">4x4 Tic Tac Toe</p>
+            <div class="btnContainer">
+                <p class="btnHover">Play</p>
+                <p class="btnHover" id="restart">Restart</p>
+            </div>
+        </div>
+        <div class="board">
+            <div class="box" id="0"></div>
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
+            <div class="box" id="9"></div>
+            <div class="box" id="10"></div>
+            <div class="box" id="11"></div>
+            <div class="box" id="12"></div>
+            <div class="box" id="13"></div>
+            <div class="box" id="14"></div>
+            <div class="box" id="15"></div>
+        </div>
+    </div>
+
+    <p class="rulesBtn" onclick="openRulesPopup()">Rules</p>
+
+    <div class="popupRules">
+        <div class="popupRulesContainer animate__animated animate__zoomIn animate__faster">
+            <div class="popupRulesContent">
+                <p class="rulesTitle">Rules for Tic Tac Toe</p>
+                <p>Tic Tac Toe is a simple game played by 2 people in the form of a 4x4 grid. One of the players plays <span>O</span> and the other plays <span>X</span>.</p>
+                <ul>
+                    <li>The game is played on a grid that's 4 squares by 4 squares.</li>
+                    <li>The game is suitable for 2 player.</li>
+                    <li>The first player is <span>O</span> and the second player is <span>X</span></li>
+                    <li>The first player to get 4 of her marks in a row (up, down, across, or diagonally) is the winner.</li>
+                    <li>When all 16 squares are full, the game is over. If no player has 4 marks in a row, the game ends in a tie.</li>
+                </ul>
+                <p class="btnHover closeRulesPopupBtn" onclick="closeRulesPopup()">I understand</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popupAnnounce">
+        <div class="popupAnnounceContainer animate__animated animate__zoomIn animate__faster">
+            <div class="popupContent">
+                <p id="congrats">Congratulation</p>
+                <p id="play" class="announce"></p>
+                <p id="win" class="win"></p>
+            </div>
+            <div class="closePopup">
+                <p class="btnHover" onclick="closePopup()">Preview</p>
+                <p class="btnHover" onclick="restartPopup()">Play again</p>
+            </div>
+        </div>
+    </div>
+
+    <audio src="./asset/Water Droplet.mp3" id="audio"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
