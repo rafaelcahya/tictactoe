@@ -34,7 +34,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 5rem;
+    padding: 2rem 5rem;
 }
 
 .title{
@@ -75,8 +75,8 @@ body{
 }
 
 .board{
-    width: 25rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20rem;
     display: grid;
     justify-items: center;
     grid-template-rows: repeat(4, minmax(0, 1fr));
@@ -86,8 +86,8 @@ body{
 
 .box{
     border-radius: 0.5rem;
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,12 +105,10 @@ body{
 }
 
 .rulesBtn{
-    position: fixed;
-    bottom: 4rem;
-    right: 5rem;
     background-color: var(--primary-text);
     color: var(--tertiary-text);
     font-weight: 500;
+    margin-top: 3rem;
     padding: .5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
@@ -138,13 +136,13 @@ body{
 .popupAnnounceContainer{
     margin: 15% auto; 
     padding: 2rem;
-    width: 25rem; 
+    width: 20rem; 
 }
 
 .popupRulesContainer{
     margin: 10% auto; 
     padding: 2rem;
-    width: 35rem; 
+    width: 20rem; 
 }
 
 .popupContent{
@@ -186,6 +184,36 @@ span{
     color:  var(--primary-text);
     font-size: 1.25rem;
     font-weight: 700;
+}
+
+@media screen and (min-width: 540px){
+    .popupRulesContainer{
+        width: 30rem; 
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header{
+        padding: 5rem 0 2rem 0;
+    }
+
+    .board{
+        width: 25rem;
+        height: 25rem;
+    }
+    
+    .box{
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .popupRulesContainer{
+        width: 35rem; 
+    }
+
+    .popupAnnounceContainer{
+        width: 25rem; 
+    }
 }
 
 /* .animate__animated.animate__zoomIn {
